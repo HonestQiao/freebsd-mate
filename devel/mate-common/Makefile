@@ -7,7 +7,7 @@
 
 PORTNAME=	mate-common
 PORTVERSION=	1.2.2
-CATEGORIES=	devel
+CATEGORIES=	devel mate
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.2/
 DISTFILES=	${DISTNAME}.tar.xz
 

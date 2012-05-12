@@ -7,7 +7,7 @@
 
 PORTNAME=	mate-desktop
 PORTVERSION=	1.2.0
-CATEGORIES=	x11
+CATEGORIES=	x11 mate
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.2/
 DISTFILES=	${DISTNAME}.tar.xz
 
@@ -19,7 +19,7 @@ COMMENT=	Additional UI API for MATE
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 
 USE_XORG=	xpm
-USE_MATE=	mateprefix matehack intlhack matedocutils gconf2 pygtk2 \
+USE_MATE=	mateprefix matehack intlhack matedocutils matecorba gconf2 pygtk2 \
 		ltverhack referencehack 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes

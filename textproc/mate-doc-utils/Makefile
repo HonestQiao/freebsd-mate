@@ -1,4 +1,4 @@
-# New ports collection makefile for:	mate-doc-utils
+# New ports collection makefile for:	matedocutils
 # Date created:							12 May 2012
 # Whom:									Jin-Sih Lin <linpct@gmail.com>
 #
@@ -7,7 +7,7 @@
 
 PORTNAME=	mate-doc-utils
 PORTVERSION=	1.2.1
-CATEGORIES=	textproc
+CATEGORIES=	textproc mate
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.2/
 DISTFILES=	${DISTNAME}.tar.xz
 
@@ -23,7 +23,7 @@ RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
 		${LOCALBASE}/share/xml/docbook/4.3/catalog.xml:${PORTSDIR}/textproc/docbook-xml-430 \
 		${LOCALBASE}/share/xml/docbook/4.4/catalog.xml:${PORTSDIR}/textproc/docbook-xml-440 \
 
-USE_MATE= 	intltool
+USE_MATE= 	intltool matehier matehack libxslt intlhack
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
 USE_GETTEXT=	yes
