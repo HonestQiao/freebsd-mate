@@ -1,6 +1,6 @@
 # New ports collection makefile for:	matecommon
 # Date created:							12 May 2012
-# Whom:									Jin-Sih Lin
+# Whom:									Jin-Sih Lin <linpct@gmail.com>
 #
 # $FreeBSD$
 #
