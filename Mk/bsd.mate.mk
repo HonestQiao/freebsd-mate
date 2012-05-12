@@ -1,9 +1,9 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.gnome.mk,v 1.173 2011/08/12 08:03:18 kwm Exp $
+# $FreeBSD: ports/Mk/bsd.mate.mk,v 1.173 2011/08/12 08:03:18 kwm Exp $
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.549 2011/06/10 22:16:59 mezz Exp $
+#     $MCom: ports/Mk/bsd.mate.mk,v 1.549 2011/06/10 22:16:59 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -17,7 +17,7 @@
 # ======================= USERS =================================
 #
 # There are no significant user-definable settings in here.
-# This file is a framework to make it easier to create GNOME ports.
+# This file is a framework to make it easier to create MATE ports.
 #
 # ======================= /USERS ================================
 
@@ -25,15 +25,15 @@
 
 # Please make sure all changes to this file are passed through the maintainer.
 # Do not commit them yourself (unless of course you're the Port's Wraith ;).
-Gnome_Include_MAINTAINER=	gnome@FreeBSD.org
-Gnome_Pre_Include=			bsd.gnome.mk
+Gnome_Include_MAINTAINER=	mate@FreeBSD.org
+Gnome_Pre_Include=			bsd.mate.mk
 
-# This section defines possible names of GNOME components and all information
+# This section defines possible names of MATE components and all information
 # necessary for ports to use those components.
 
 # Ports can use this as follows:
 #
-# USE_GNOME=	gnomeprint bonobo
+# USE_MATE=	mateprint bonobo
 #
 # .include <bsd.port.mk>
 #
@@ -57,7 +57,7 @@ Gnome_Pre_Include=			bsd.gnome.mk
 #				add the following to your Makefile:
 #				"GLIB_SCHEMAS=foo.gschema.xml bar.gschema.xml".
 #
-# INSTALLS_OMF		- If set, bsd.gnome.mk will automatically scan pkg-plist
+# INSTALLS_OMF		- If set, bsd.mate.mk will automatically scan pkg-plist
 #				file and add apropriate @exec/@unexec directives for
 #				each .omf file found to track OMF registration database.
 #
@@ -68,34 +68,34 @@ Gnome_Pre_Include=			bsd.gnome.mk
 #
 
 # non-version specific components
-_USE_GNOME_ALL= esound intlhack intltool ltasneededhack lthack ltverhack \
-		gnomehack referencehack gnomehier gnomemimedata gnomeprefix \
+_USE_MATE_ALL= esound intlhack intltool ltasneededhack lthack ltverhack \
+		matehack referencehack matehier matemimedata mateprefix \
 		pkgconfig
 
-# GNOME 1 components
-_USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 \
-		gnomecanvas gnomedb gnomelibs gnomeprint gnomevfs gtk12 \
+# MATE 1 components
+_USE_MATE_ALL+= bonobo gal gconf gdkpixbuf glib12 \
+		matecanvas matedb matelibs mateprint matevfs gtk12 \
 		libgda libghttp libglade libxml imlib oaf orbit pygtk
 
-# GNOME 2 components
-_USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
-		gdkpixbuf2 gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop \
-		gnomedesktopsharp20 gnomedocutils gnomemenus gnomepanel gnomesharp20 \
-		gnomespeech gnomevfs2 gtk-update-icon-cache gtk20 gtkhtml3 gtksharp10 \
+# MATE 2 components
+_USE_MATE_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
+		gdkpixbuf2 gconf2 _glib20 glib20 matecontrolcenter2 matedesktop \
+		matedesktopsharp20 matedocutils matemenus matepanel matesharp20 \
+		matespeech matevfs2 gtk-update-icon-cache gtk20 gtkhtml3 gtksharp10 \
 		gtksharp20 gtksourceview gtksourceview2 gvfs libartlgpl2 libbonobo \
-		libbonoboui libgailgnome libgda2 libgda3 libgda4 libglade2 libgnome \
-		libgnomecanvas libgnomedb libgnomekbd libgnomeprint libgnomeprintui \
-		libgnomeui libgsf libgsf_gnome libgtkhtml libidl librsvg2 libwnck \
+		libbonoboui libgailmate libgda2 libgda3 libgda4 libglade2 libmate \
+		libmatecanvas libmatedb libmatekbd libmateprint libmateprintui \
+		libmateui libgsf libgsf_mate libgtkhtml libidl librsvg2 libwnck \
 		libxml2 libxslt libzvt linc metacity nautilus2 nautiluscdburner \
-		orbit2 pango pygnome2 pygnomedesktop pygnomeextras pygobject pygtk2 \
+		orbit2 pango pymate2 pymatedesktop pymateextras pygobject pygtk2 \
 		pygtksourceview vte
 
-# GNOME 3 components
-_USE_GNOME_ALL+= dconf gtk30
+# MATE 3 components
+_USE_MATE_ALL+= dconf gtk30
 
-GNOME_MAKEFILEIN?=	Makefile.in
+MATE_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
-gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
+matehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "${MATE_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				's|[(]libdir[)]/locale|(prefix)/share/locale|g ; \
 				 s|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
 				 s|[(]datadir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
@@ -113,21 +113,21 @@ referencehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in" -type f | ${XARGS
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
 
-GNOME_MTREE_FILE?=		${LOCALBASE}/etc/mtree/BSD.gnome.dist
-gnomehier_DETECT=	${GNOME_MTREE_FILE}
-gnomehier_RUN_DEPENDS=	${gnomehier_DETECT}:${PORTSDIR}/misc/gnomehier
+MATE_MTREE_FILE?=		${LOCALBASE}/etc/mtree/BSD.mate.dist
+matehier_DETECT=	${MATE_MTREE_FILE}
+matehier_RUN_DEPENDS=	${matehier_DETECT}:${PORTSDIR}/misc/matehier
 
-GNOME_HTML_DIR?=	${PREFIX}/share/doc
+MATE_HTML_DIR?=	${PREFIX}/share/doc
 GCONF_CONFIG_OPTIONS?=	merged
 GCONF_CONFIG_DIRECTORY?=etc/gconf/gconf.xml.defaults
 GCONF_CONFIG_SOURCE?=xml:${GCONF_CONFIG_OPTIONS}:${PREFIX}/${GCONF_CONFIG_DIRECTORY}
-GNOME_LOCALSTATEDIR?=	${PREFIX}/share
-gnomeprefix_CONFIGURE_ENV=GTKDOC="false"
-gnomeprefix_CONFIGURE_ARGS=--localstatedir=${GNOME_LOCALSTATEDIR} \
-			   --with-html-dir=${GNOME_HTML_DIR} \
+MATE_LOCALSTATEDIR?=	${PREFIX}/share
+mateprefix_CONFIGURE_ENV=GTKDOC="false"
+mateprefix_CONFIGURE_ARGS=--localstatedir=${MATE_LOCALSTATEDIR} \
+			   --with-html-dir=${MATE_HTML_DIR} \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE}
-gnomeprefix_USE_GNOME_IMPL=gnomehier
+mateprefix_USE_MATE_IMPL=matehier
 
 ESD_CONFIG?=		${LOCALBASE}/bin/esd-config
 esound_LIB_DEPENDS=	esd.2:${PORTSDIR}/audio/esound
@@ -143,308 +143,308 @@ glib12_LIB_DEPENDS=	glib-12.3:${PORTSDIR}/devel/glib12
 glib12_CONFIGURE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_MAKE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_DETECT=		${GLIB_CONFIG}
-glib12_USE_GNOME_IMPL=	pkgconfig
+glib12_USE_MATE_IMPL=	pkgconfig
 
 GTK_CONFIG?=		${LOCALBASE}/bin/gtk12-config
 gtk12_LIB_DEPENDS=	gtk-12.2:${PORTSDIR}/x11-toolkits/gtk12
 gtk12_CONFIGURE_ENV=	GTK_CONFIG="${GTK_CONFIG}"
 gtk12_MAKE_ENV=		GTK_CONFIG="${GTK_CONFIG}"
 gtk12_DETECT=		${GTK_CONFIG}
-gtk12_USE_GNOME_IMPL=	glib12
+gtk12_USE_MATE_IMPL=	glib12
 
 XML_CONFIG?=		${LOCALBASE}/bin/xml-config
 libxml_LIB_DEPENDS=	xml.5:${PORTSDIR}/textproc/libxml
 libxml_CONFIGURE_ENV=	XML_CONFIG="${XML_CONFIG}"
 libxml_MAKE_ENV=	XML_CONFIG="${XML_CONFIG}"
 libxml_DETECT=		${XML_CONFIG}
-libxml_USE_GNOME_IMPL=	glib12
+libxml_USE_MATE_IMPL=	glib12
 
 ORBIT_CONFIG?=		${LOCALBASE}/bin/orbit-config
 orbit_LIB_DEPENDS=	ORBit.2:${PORTSDIR}/devel/ORBit
 orbit_CONFIGURE_ENV=	ORBIT_CONFIG="${ORBIT_CONFIG}"
 orbit_MAKE_ENV=		ORBIT_CONFIG="${ORBIT_CONFIG}"
 orbit_DETECT=		${ORBIT_CONFIG}
-orbit_USE_GNOME_IMPL=	glib12
+orbit_USE_MATE_IMPL=	glib12
 
 GDK_PIXBUF_CONFIG?=	${LOCALBASE}/bin/gdk-pixbuf-config
 gdkpixbuf_LIB_DEPENDS=	gdk_pixbuf.2:${PORTSDIR}/graphics/gdk-pixbuf
 gdkpixbuf_CONFIGURE_ENV=GDK_PIXBUF_CONFIG="${GDK_PIXBUF_CONFIG}"
 gdkpixbuf_MAKE_ENV=	GDK_PIXBUF_CONFIG="${GDK_PIXBUF_CONFIG}"
 gdkpixbuf_DETECT=	${GDK_PIXBUF_CONFIG}
-gdkpixbuf_USE_GNOME_IMPL=gtk12
+gdkpixbuf_USE_MATE_IMPL=gtk12
 
 IMLIB_CONFIG?=		${LOCALBASE}/bin/imlib-config
 imlib_LIB_DEPENDS=	Imlib.5:${PORTSDIR}/graphics/imlib
 imlib_CONFIGURE_ENV=	IMLIB_CONFIG="${IMLIB_CONFIG}"
 imlib_MAKE_ENV=		IMLIB_CONFIG="${IMLIB_CONFIG}"
 imlib_DETECT=		${IMLIB_CONFIG}
-imlib_USE_GNOME_IMPL=	gtk12
+imlib_USE_MATE_IMPL=	gtk12
 
-GNOME_CONFIG?=		${LOCALBASE}/bin/gnome-config
-gnomelibs_LIB_DEPENDS=	gnome.5:${PORTSDIR}/x11/gnome-libs
-gnomelibs_CONFIGURE_ENV=GNOME_CONFIG="${GNOME_CONFIG}"
-gnomelibs_MAKE_ENV=	GNOME_CONFIG="${GNOME_CONFIG}"
-gnomelibs_DETECT=	${GNOME_CONFIG}
-gnomelibs_USE_GNOME_IMPL=esound gtk12 imlib libxml orbit
+MATE_CONFIG?=		${LOCALBASE}/bin/mate-config
+matelibs_LIB_DEPENDS=	mate.5:${PORTSDIR}/x11/mate-libs
+matelibs_CONFIGURE_ENV=MATE_CONFIG="${MATE_CONFIG}"
+matelibs_MAKE_ENV=	MATE_CONFIG="${MATE_CONFIG}"
+matelibs_DETECT=	${MATE_CONFIG}
+matelibs_USE_MATE_IMPL=esound gtk12 imlib libxml orbit
 
-gnomecanvas_LIB_DEPENDS=gnomecanvaspixbuf.1:${PORTSDIR}/graphics/gnomecanvas
-gnomecanvas_DETECT=	${LOCALBASE}/etc/gnomecanvaspixbufConf.sh
-gnomecanvas_USE_GNOME_IMPL=gnomelibs gdkpixbuf
+matecanvas_LIB_DEPENDS=matecanvaspixbuf.1:${PORTSDIR}/graphics/matecanvas
+matecanvas_DETECT=	${LOCALBASE}/etc/matecanvaspixbufConf.sh
+matecanvas_USE_MATE_IMPL=matelibs gdkpixbuf
 
 OAF_CONFIG?=		${LOCALBASE}/bin/oaf-config
 oaf_LIB_DEPENDS=	oaf.0:${PORTSDIR}/devel/oaf
 oaf_CONFIGURE_ENV=	OAF_CONFIG="${OAF_CONFIG}"
 oaf_MAKE_ENV=		OAF_CONFIG="${OAF_CONFIG}"
 oaf_DETECT=		${OAF_CONFIG}
-oaf_USE_GNOME_IMPL=	glib12 orbit libxml
+oaf_USE_MATE_IMPL=	glib12 orbit libxml
 
-gnomemimedata_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-mime-data-2.0.pc
-gnomemimedata_BUILD_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnome-mime-data
-gnomemimedata_RUN_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnome-mime-data
-gnomemimedata_USE_GNOME_IMPL=gnomehier pkgconfig
+matemimedata_DETECT=	${LOCALBASE}/libdata/pkgconfig/mate-mime-data-2.0.pc
+matemimedata_BUILD_DEPENDS=${matemimedata_DETECT}:${PORTSDIR}/misc/mate-mime-data
+matemimedata_RUN_DEPENDS=${matemimedata_DETECT}:${PORTSDIR}/misc/mate-mime-data
+matemimedata_USE_MATE_IMPL=matehier pkgconfig
 
 GCONF_CONFIG?=		${LOCALBASE}/bin/gconf-config
 gconf_LIB_DEPENDS=	gconf-1.1:${PORTSDIR}/devel/gconf
 gconf_CONFIGURE_ENV=	GCONF_CONFIG="${GCONF_CONFIG}"
 gconf_MAKE_ENV=		GCONF_CONFIG="${GCONF_CONFIG}"
 gconf_DETECT=		${GCONF_CONFIG}
-gconf_USE_GNOME_IMPL=	oaf
+gconf_USE_MATE_IMPL=	oaf
 
-GNOME_VFS_CONFIG?=	${LOCALBASE}/bin/gnome-vfs-config
-gnomevfs_LIB_DEPENDS=	gnomevfs.0:${PORTSDIR}/devel/gnome-vfs1
-gnomevfs_CONFIGURE_ENV=	GNOME_VFS_CONFIG="${GNOME_VFS_CONFIG}"
-gnomevfs_MAKE_ENV=	GNOME_VFS_CONFIG="${GNOME_VFS_CONFIG}"
-gnomevfs_DETECT=	${GNOME_VFS_CONFIG}
-gnomevfs_USE_GNOME_IMPL=gnomemimedata gconf gnomelibs
+MATE_VFS_CONFIG?=	${LOCALBASE}/bin/mate-vfs-config
+matevfs_LIB_DEPENDS=	matevfs.0:${PORTSDIR}/devel/mate-vfs1
+matevfs_CONFIGURE_ENV=	MATE_VFS_CONFIG="${MATE_VFS_CONFIG}"
+matevfs_MAKE_ENV=	MATE_VFS_CONFIG="${MATE_VFS_CONFIG}"
+matevfs_DETECT=	${MATE_VFS_CONFIG}
+matevfs_USE_MATE_IMPL=matemimedata gconf matelibs
 
-gnomeprint_LIB_DEPENDS=	gnomeprint.16:${PORTSDIR}/print/gnome-print
-gnomeprint_DETECT=	${LOCALBASE}/etc/printConf.sh
-gnomeprint_USE_GNOME_IMPL=gnomelibs gnomecanvas
+mateprint_LIB_DEPENDS=	mateprint.16:${PORTSDIR}/print/mate-print
+mateprint_DETECT=	${LOCALBASE}/etc/printConf.sh
+mateprint_USE_MATE_IMPL=matelibs matecanvas
 
 bonobo_LIB_DEPENDS=	bonobo.2:${PORTSDIR}/devel/bonobo
 bonobo_DETECT=		${LOCALBASE}/etc/bonoboConf.sh
-bonobo_USE_GNOME_IMPL=	oaf gnomeprint
+bonobo_USE_MATE_IMPL=	oaf mateprint
 
 GDA_CONFIG?=		${LOCALBASE}/bin/gda-config
 libgda_LIB_DEPENDS=	gda-client.0:${PORTSDIR}/databases/libgda
 libgda_CONFIGURE_ENV=	GDA_CONFIG="${GDA_CONFIG}"
 libgda_MAKE_ENV=	GDA_CONFIG="${GDA_CONFIG}"
 libgda_DETECT=		${GDA_CONFIG}
-libgda_USE_GNOME_IMPL=	gconf bonobo
+libgda_USE_MATE_IMPL=	gconf bonobo
 
-GNOMEDB_CONFIG?=	${LOCALBASE}/bin/gnomedb-config
-gnomedb_LIB_DEPENDS=	gnomedb.0:${PORTSDIR}/databases/gnome-db
-gnomedb_CONFIGURE_ENV=	GNOMEDB_CONFIG="${GNOMEDB_CONFIG}"
-gnomedb_MAKE_ENV=	GNOMEDB_CONFIG="${GNOMEDB_CONFIG}"
-gnomedb_DETECT=		${GNOMEDB_CONFIG}
-gnomedb_USE_GNOME_IMPL=	libgda
+MATEDB_CONFIG?=	${LOCALBASE}/bin/matedb-config
+matedb_LIB_DEPENDS=	matedb.0:${PORTSDIR}/databases/mate-db
+matedb_CONFIGURE_ENV=	MATEDB_CONFIG="${MATEDB_CONFIG}"
+matedb_MAKE_ENV=	MATEDB_CONFIG="${MATEDB_CONFIG}"
+matedb_DETECT=		${MATEDB_CONFIG}
+matedb_USE_MATE_IMPL=	libgda
 
 LIBGLADE_CONFIG?=	${LOCALBASE}/bin/libglade-config
 libglade_LIB_DEPENDS=	glade.4:${PORTSDIR}/devel/libglade
 libglade_CONFIGURE_ENV=	LIBGLADE_CONFIG="${LIBGLADE_CONFIG}"
 libglade_MAKE_ENV=	LIBGLADE_CONFIG="${LIBGLADE_CONFIG}"
 libglade_DETECT=	${LIBGLADE_CONFIG}
-libglade_USE_GNOME_IMPL=gnomedb
+libglade_USE_MATE_IMPL=matedb
 
 gal_LIB_DEPENDS=	gal.23:${PORTSDIR}/x11-toolkits/gal
 gal_DETECT=		${LOCALBASE}/etc/galConf.sh
-gal_USE_GNOME_IMPL=	libglade
+gal_USE_MATE_IMPL=	libglade
 
 pygtk_DETECT=			${LOCALBASE}/bin/pygtk-codegen-1.2
 pygtk_BUILD_DEPENDS=	${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
 pygtk_RUN_DEPENDS=		${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
-pygtk_USE_GNOME_IMPL=	gnomelibs gdkpixbuf libglade
+pygtk_USE_MATE_IMPL=	matelibs gdkpixbuf libglade
 
 _glib20_LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
 _glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
-_glib20_USE_GNOME_IMPL=	pkgconfig
+_glib20_USE_MATE_IMPL=	pkgconfig
 
 glib20_RUN_DEPENDS=	${LOCALBASE}/lib/gio/modules/libgiofam.so:${PORTSDIR}/devel/gio-fam-backend
 glib20_DETECT=		${LOCALBASE}/lib/gio/modules/libgiofam.so
-glib20_USE_GNOME_IMPL=	_glib20
+glib20_USE_MATE_IMPL=	_glib20
 
 atk_LIB_DEPENDS=	atk-1.0.0:${PORTSDIR}/accessibility/atk
 atk_DETECT=		${LOCALBASE}/libdata/pkgconfig/atk.pc
-atk_USE_GNOME_IMPL=	glib20
+atk_USE_MATE_IMPL=	glib20
 
 dconf_LIB_DEPENDS=	dconf.0:${PORTSDIR}/devel/dconf
 dconf_DETECT=		${LOCALBASE}/libdata/pkgconfig/dconf.pc
-dconf_USE_GNOME_IMPL=	glib20
+dconf_USE_MATE_IMPL=	glib20
 
 pango_LIB_DEPENDS=	pango-1.0.0:${PORTSDIR}/x11-toolkits/pango
 pango_DETECT=		${LOCALBASE}/libdata/pkgconfig/pango.pc
-pango_USE_GNOME_IMPL=	glib20
+pango_USE_MATE_IMPL=	glib20
 
 gdkpixbuf2_LIB_DEPENDS=	gdk_pixbuf-2.0.0:${PORTSDIR}/graphics/gdk-pixbuf2
 gdkpixbuf2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gdk-pixbuf-2.0.pc
-gdkpixbuf2_USE_GNOME_IMPL=glib20
+gdkpixbuf2_USE_MATE_IMPL=glib20
 
 gtk-update-icon-cache_BUILD_DEPENDS=	gtk-update-icon-cache:${PORTSDIR}/graphics/gtk-update-icon-cache
 gtk-update-icon-cache_RUN_DEPENDS=	gtk-update-icon-cache:${PORTSDIR}/graphics/gtk-update-icon-cache
 gtk-update-icon-cache_DETECT=		${LOCALBASE}/bin/gtk-update-icon-cache
-gtk-update-icon-cache_USE_GNOME_IMPL=	atk pango gdkpixbuf2
+gtk-update-icon-cache_USE_MATE_IMPL=	atk pango gdkpixbuf2
 
 gtk20_LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
-gtk20_USE_GNOME_IMPL=	intltool atk pango
+gtk20_USE_MATE_IMPL=	intltool atk pango
 GTK2_VERSION=		2.10.0
 
 gtk30_LIB_DEPENDS=	gtk-3.0:${PORTSDIR}/x11-toolkits/gtk30
 gtk30_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-3.0.pc
-gtk30_USE_GNOME_IMPL=	intltool atk pango
+gtk30_USE_MATE_IMPL=	intltool atk pango
 GTK3_VERSION=		3.0.0
 
 linc_LIB_DEPENDS=	linc.1:${PORTSDIR}/net/linc
 linc_DETECT=		${LOCALBASE}/libdata/pkgconfig/linc.pc
-linc_USE_GNOME_IMPL=	glib20
+linc_USE_MATE_IMPL=	glib20
 
 libidl_LIB_DEPENDS=	IDL-2.0:${PORTSDIR}/devel/libIDL
 libidl_DETECT=		${LOCALBASE}/libdata/pkgconfig/libIDL-2.0.pc
-libidl_USE_GNOME_IMPL=	glib20
+libidl_USE_MATE_IMPL=	glib20
 
 orbit2_LIB_DEPENDS=	ORBit-2.0:${PORTSDIR}/devel/ORBit2
 orbit2_DETECT=		${LOCALBASE}/libdata/pkgconfig/ORBit-2.0.pc
-orbit2_USE_GNOME_IMPL=	libidl
+orbit2_USE_MATE_IMPL=	libidl
 
 libglade2_LIB_DEPENDS=	glade-2.0.0:${PORTSDIR}/devel/libglade2
 libglade2_DETECT=	${LOCALBASE}/libdata/pkgconfig/libglade-2.0.pc
-libglade2_USE_GNOME_IMPL=libxml2 gtk20
+libglade2_USE_MATE_IMPL=libxml2 gtk20
 
 libxml2_LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 libxml2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml-2.0.pc
-libxml2_USE_GNOME_IMPL=	pkgconfig
+libxml2_USE_MATE_IMPL=	pkgconfig
 
 libxslt_LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt
 libxslt_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxslt.pc
-libxslt_USE_GNOME_IMPL=	libxml2
+libxslt_USE_MATE_IMPL=	libxml2
 
 libbonobo_LIB_DEPENDS=	bonobo-2.0:${PORTSDIR}/devel/libbonobo
 libbonobo_DETECT=	${LOCALBASE}/libdata/pkgconfig/libbonobo-2.0.pc
-libbonobo_USE_GNOME_IMPL=libxml2 orbit2
+libbonobo_USE_MATE_IMPL=libxml2 orbit2
 
 gconf2_LIB_DEPENDS=	gconf-2.4:${PORTSDIR}/devel/gconf2
 gconf2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gconf-2.0.pc
-gconf2_USE_GNOME_IMPL=	orbit2 libxml2 gtk20
+gconf2_USE_MATE_IMPL=	orbit2 libxml2 gtk20
 
-gnomevfs2_LIB_DEPENDS=	gnomevfs-2.0:${PORTSDIR}/devel/gnome-vfs
-gnomevfs2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-vfs-2.0.pc
-gnomevfs2_USE_GNOME_IMPL=gconf2 gnomemimedata
+matevfs2_LIB_DEPENDS=	matevfs-2.0:${PORTSDIR}/devel/mate-vfs
+matevfs2_DETECT=	${LOCALBASE}/libdata/pkgconfig/mate-vfs-2.0.pc
+matevfs2_USE_MATE_IMPL=gconf2 matemimedata
 
-libgnomecanvas_LIB_DEPENDS=	gnomecanvas-2.0:${PORTSDIR}/graphics/libgnomecanvas
-libgnomecanvas_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomecanvas-2.0.pc
-libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
+libmatecanvas_LIB_DEPENDS=	matecanvas-2.0:${PORTSDIR}/graphics/libmatecanvas
+libmatecanvas_DETECT=		${LOCALBASE}/libdata/pkgconfig/libmatecanvas-2.0.pc
+libmatecanvas_USE_MATE_IMPL=	libglade2 libartlgpl2
 
 libartlgpl2_LIB_DEPENDS=	art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl
 libartlgpl2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libart-2.0.pc
-libartlgpl2_USE_GNOME_IMPL=	pkgconfig
+libartlgpl2_USE_MATE_IMPL=	pkgconfig
 
-libgnomeprint_LIB_DEPENDS=	gnomeprint-2-2.0:${PORTSDIR}/print/libgnomeprint
-libgnomeprint_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomeprint-2.2.pc
-libgnomeprint_USE_GNOME_IMPL=	libbonobo libartlgpl2 gtk20
+libmateprint_LIB_DEPENDS=	mateprint-2-2.0:${PORTSDIR}/print/libmateprint
+libmateprint_DETECT=		${LOCALBASE}/libdata/pkgconfig/libmateprint-2.2.pc
+libmateprint_USE_MATE_IMPL=	libbonobo libartlgpl2 gtk20
 
-libgnomeprintui_LIB_DEPENDS=	gnomeprintui-2-2.0:${PORTSDIR}/x11-toolkits/libgnomeprintui
-libgnomeprintui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomeprintui-2.2.pc
-libgnomeprintui_USE_GNOME_IMPL=	libgnomeprint libgnomecanvas
+libmateprintui_LIB_DEPENDS=	mateprintui-2-2.0:${PORTSDIR}/x11-toolkits/libmateprintui
+libmateprintui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libmateprintui-2.2.pc
+libmateprintui_USE_MATE_IMPL=	libmateprint libmatecanvas
 
-libgnome_LIB_DEPENDS=	gnome-2.0:${PORTSDIR}/x11/libgnome
-libgnome_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgnome-2.0.pc
-libgnome_USE_GNOME_IMPL=gnomevfs2 esound libbonobo
+libmate_LIB_DEPENDS=	mate-2.0:${PORTSDIR}/x11/libmate
+libmate_DETECT=	${LOCALBASE}/libdata/pkgconfig/libmate-2.0.pc
+libmate_USE_MATE_IMPL=matevfs2 esound libbonobo
 
 libbonoboui_LIB_DEPENDS=	bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui
 libbonoboui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libbonoboui-2.0.pc
-libbonoboui_USE_GNOME_IMPL=	libgnomecanvas libgnome
+libbonoboui_USE_MATE_IMPL=	libmatecanvas libmate
 
-libgnomeui_LIB_DEPENDS=		gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui
-libgnomeui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomeui-2.0.pc
-libgnomeui_USE_GNOME_IMPL=	libbonoboui
+libmateui_LIB_DEPENDS=		mateui-2.0:${PORTSDIR}/x11-toolkits/libmateui
+libmateui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libmateui-2.0.pc
+libmateui_USE_MATE_IMPL=	libbonoboui
 
 atspi_LIB_DEPENDS=	spi.10:${PORTSDIR}/accessibility/at-spi
 atspi_DETECT=		${LOCALBASE}/libdata/pkgconfig/cspi-1.0.pc
-atspi_USE_GNOME_IMPL=	gtk20 libbonobo
+atspi_USE_MATE_IMPL=	gtk20 libbonobo
 
-libgailgnome_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgail-gnome.pc
-libgailgnome_RUN_DEPENDS=	${libgailgnome_DETECT}:${PORTSDIR}/x11-toolkits/libgail-gnome
-libgailgnome_USE_GNOME_IMPL=	libgnomeui atspi
+libgailmate_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgail-mate.pc
+libgailmate_RUN_DEPENDS=	${libgailmate_DETECT}:${PORTSDIR}/x11-toolkits/libgail-mate
+libgailmate_USE_MATE_IMPL=	libmateui atspi
 
 libgtkhtml_LIB_DEPENDS=	gtkhtml-2.0:${PORTSDIR}/www/libgtkhtml
 libgtkhtml_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgtkhtml-2.0.pc
-libgtkhtml_USE_GNOME_IMPL=libxslt gnomevfs2
+libgtkhtml_USE_MATE_IMPL=libxslt matevfs2
 
-gnomedesktop_LIB_DEPENDS=	gnome-desktop-2.17:${PORTSDIR}/x11/gnome-desktop
-gnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-2.0.pc
-gnomedesktop_USE_GNOME_IMPL=	gconf2 gnomedocutils pygtk2
-gnomedesktop_GNOME_DESKTOP_VERSION=2
+matedesktop_LIB_DEPENDS=	mate-desktop-2.17:${PORTSDIR}/x11/mate-desktop
+matedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/mate-desktop-2.0.pc
+matedesktop_USE_MATE_IMPL=	gconf2 matedocutils pygtk2
+matedesktop_MATE_DESKTOP_VERSION=2
 
-gnomedesktopsharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-sharp-2.0.pc
-gnomedesktopsharp20_BUILD_DEPENDS=	${gnomedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-desktop-sharp20
-gnomedesktopsharp20_RUN_DEPENDS=	${gnomedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-desktop-sharp20
-gnomedesktopsharp20_USE_GNOME_IMPL=	gnomesharp20 gnomepanel gtkhtml3 librsvg2 vte libgnomeprintui gtksourceview2 gnomepanel libwnck nautiluscdburner
+matedesktopsharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/mate-desktop-sharp-2.0.pc
+matedesktopsharp20_BUILD_DEPENDS=	${matedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/mate-desktop-sharp20
+matedesktopsharp20_RUN_DEPENDS=	${matedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/mate-desktop-sharp20
+matedesktopsharp20_USE_MATE_IMPL=	matesharp20 matepanel gtkhtml3 librsvg2 vte libmateprintui gtksourceview2 matepanel libwnck nautiluscdburner
 
 libwnck_LIB_DEPENDS=	wnck-1.22:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${LOCALBASE}/libdata/pkgconfig/libwnck-1.0.pc
-libwnck_USE_GNOME_IMPL=	gtk20
+libwnck_USE_MATE_IMPL=	gtk20
 
 vte_LIB_DEPENDS=	vte.9:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte.pc
-vte_USE_GNOME_IMPL=	gtk20
+vte_USE_MATE_IMPL=	gtk20
 
 libzvt_LIB_DEPENDS=	zvt-2.0.0:${PORTSDIR}/x11-toolkits/libzvt
 libzvt_DETECT=	${LOCALBASE}/libdata/pkgconfig/libzvt-2.0.pc
-libzvt_USE_GNOME_IMPL=	gtk20
+libzvt_USE_MATE_IMPL=	gtk20
 
 librsvg2_LIB_DEPENDS=	rsvg-2.2:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${LOCALBASE}/libdata/pkgconfig/librsvg-2.0.pc
-librsvg2_USE_GNOME_IMPL=libgsf gtk20
+librsvg2_USE_MATE_IMPL=libgsf gtk20
 
 eel2_LIB_DEPENDS=	eel-2.2:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
-eel2_USE_GNOME_IMPL=	gnomedesktop
+eel2_USE_MATE_IMPL=	matedesktop
 
-gnomepanel_LIB_DEPENDS=	panel-applet-3.0:${PORTSDIR}/x11/gnome-panel
-gnomepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-3.0.pc
-gnomepanel_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils librsvg2
-gnomepanel_GNOME_DESKTOP_VERSION=2
+matepanel_LIB_DEPENDS=	panel-applet-3.0:${PORTSDIR}/x11/mate-panel
+matepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-3.0.pc
+matepanel_USE_MATE_IMPL=matedesktop libwnck matemenus matedocutils librsvg2
+matepanel_MATE_DESKTOP_VERSION=2
 
 nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus
 nautilus2_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-extension.pc
-nautilus2_USE_GNOME_IMPL=librsvg2 gnomedesktop desktopfileutils gvfs
-nautilus2_GNOME_DESKTOP_VERSION=2
+nautilus2_USE_MATE_IMPL=librsvg2 matedesktop desktopfileutils gvfs
+nautilus2_MATE_DESKTOP_VERSION=2
 
 metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
 metacity_DETECT=	${LOCALBASE}/libdata/pkgconfig/libmetacity-private.pc
-metacity_USE_GNOME_IMPL=gconf2
+metacity_USE_MATE_IMPL=gconf2
 
 gal2_LIB_DEPENDS=	gal-2.4.0:${PORTSDIR}/x11-toolkits/gal2
 gal2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gal-2.4.pc
-gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
+gal2_USE_MATE_IMPL=mateui libmateprintui
 
-gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gnome-control-center
-gnomecontrolcenter2_DETECT=${LOCALBASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
-gnomecontrolcenter2_USE_GNOME_IMPL=metacity gnomemenus desktopfileutils libgnomekbd gnomedesktop librsvg2
+matecontrolcenter2_LIB_DEPENDS=mate-window-settings.1:${PORTSDIR}/sysutils/mate-control-center
+matecontrolcenter2_DETECT=${LOCALBASE}/libdata/pkgconfig/mate-window-settings-2.0.pc
+matecontrolcenter2_USE_MATE_IMPL=metacity matemenus desktopfileutils libmatekbd matedesktop librsvg2
 
 libgda2_LIB_DEPENDS=	gda-2.3:${PORTSDIR}/databases/libgda2
 libgda2_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgda.pc
-libgda2_USE_GNOME_IMPL=	glib20 libxslt
+libgda2_USE_MATE_IMPL=	glib20 libxslt
 
 libgda3_LIB_DEPENDS=	gda-3.0.3:${PORTSDIR}/databases/libgda3
 libgda3_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgda-3.0.pc
-libgda3_USE_GNOME_IMPL=	glib20 libxslt
+libgda3_USE_MATE_IMPL=	glib20 libxslt
 
 libgda4_LIB_DEPENDS=	gda-4.0.5:${PORTSDIR}/databases/libgda4
 libgda4_DETECT=			 ${LOCALBASE}/libdata/pkgconfig/libgda-4.0.pc
-libgda4_USE_GNOME_IMPL=	glib20 libxslt
+libgda4_USE_MATE_IMPL=	glib20 libxslt
 
-libgnomedb_LIB_DEPENDS=	gnomedb-3.0.4:${PORTSDIR}/databases/libgnomedb
-libgnomedb_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomedb.pc
-libgnomedb_USE_GNOME_IMPL=libgnomeui libgda3
+libmatedb_LIB_DEPENDS=	matedb-3.0.4:${PORTSDIR}/databases/libmatedb
+libmatedb_DETECT=		${LOCALBASE}/libdata/pkgconfig/libmatedb.pc
+libmatedb_USE_MATE_IMPL=libmateui libgda3
 
 gtksourceview_LIB_DEPENDS=	gtksourceview-1.0.0:${PORTSDIR}/x11-toolkits/gtksourceview
 gtksourceview_DETECT=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-1.0.pc
-gtksourceview_USE_GNOME_IMPL=libgnome libgnomeprintui
+gtksourceview_USE_MATE_IMPL=libmate libmateprintui
 
 gtksourceview2_LIB_DEPENDS=	gtksourceview-2.0.0:${PORTSDIR}/x11-toolkits/gtksourceview2
 gtksourceview2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-2.0.pc
-gtksourceview2_USE_GNOME_IMPL=gtk20 libxml2
+gtksourceview2_USE_MATE_IMPL=gtk20 libxml2
 
 pkgconfig_DETECT=			${LOCALBASE}/bin/pkg-config
 pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkg-config
@@ -452,26 +452,26 @@ pkgconfig_RUN_DEPENDS=		pkg-config:${PORTSDIR}/devel/pkg-config
 
 libgsf_LIB_DEPENDS=			gsf-1.114:${PORTSDIR}/devel/libgsf
 libgsf_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgsf-1.pc
-libgsf_USE_GNOME_IMPL=		glib20 libxml2
+libgsf_USE_MATE_IMPL=		glib20 libxml2
 
-libgsf_gnome_LIB_DEPENDS=	gsf-gnome-1.114:${PORTSDIR}/devel/libgsf-gnome
-libgsf_gnome_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgsf-gnome-1.pc
-libgsf_gnome_USE_GNOME_IMPL=	gconf2 libgsf gnomevfs2
+libgsf_mate_LIB_DEPENDS=	gsf-mate-1.114:${PORTSDIR}/devel/libgsf-mate
+libgsf_mate_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgsf-mate-1.pc
+libgsf_mate_USE_MATE_IMPL=	gconf2 libgsf matevfs2
 
 pygobject_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygobject-2.0.pc
 pygobject_BUILD_DEPENDS=	pygobject-codegen-2.0:${PORTSDIR}/devel/py-gobject
 pygobject_RUN_DEPENDS=		pygobject-codegen-2.0:${PORTSDIR}/devel/py-gobject
-pygobject_USE_GNOME_IMPL=	glib20
+pygobject_USE_MATE_IMPL=	glib20
 
 pygtk2_DETECT=			${LOCALBASE}/libdata/pkgconfig/pygtk-2.0.pc
 pygtk2_BUILD_DEPENDS=	${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
 pygtk2_RUN_DEPENDS=		${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
-pygtk2_USE_GNOME_IMPL=	libglade2 pygobject
+pygtk2_USE_MATE_IMPL=	libglade2 pygobject
 
-pygnome2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-2.0.pc
-pygnome2_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
-pygnome2_RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
-pygnome2_USE_GNOME_IMPL=libgnomeui pygtk2
+pymate2_DETECT=		${LOCALBASE}/libdata/pkgconfig/mate-python-2.0.pc
+pymate2_BUILD_DEPENDS=	${pymate2_DETECT}:${PORTSDIR}/x11-toolkits/py-mate2
+pymate2_RUN_DEPENDS=	${pymate2_DETECT}:${PORTSDIR}/x11-toolkits/py-mate2
+pymate2_USE_MATE_IMPL=libmateui pygtk2
 
 intltool_DETECT=		${LOCALBASE}/bin/intltool-extract
 intltool_BUILD_DEPENDS=	${intltool_DETECT}:${PORTSDIR}/textproc/intltool
@@ -481,102 +481,102 @@ intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${RE
 				 s|^push @INC, "/.*|push @INC, "${LOCALBASE}/share/intltool";| ; \
 				 s|/usr/bin/iconv|${LOCALBASE}/bin/iconv|g ; \
 				 s|unpack *[(]'"'"'U\*'"'"'|unpack ('"'"'C*'"'"'|'
-intlhack_USE_GNOME_IMPL=intltool
+intlhack_USE_MATE_IMPL=intltool
 
 gtkhtml3_LIB_DEPENDS=	gtkhtml-3.14.19:${PORTSDIR}/www/gtkhtml3
 gtkhtml3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgtkhtml-3.14.pc
-gtkhtml3_USE_GNOME_IMPL=libglade2
+gtkhtml3_USE_MATE_IMPL=libglade2
 
-gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnome-speech
-gnomespeech_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc
-gnomespeech_USE_GNOME_IMPL=libbonobo
+matespeech_LIB_DEPENDS=matespeech.7:${PORTSDIR}/accessibility/mate-speech
+matespeech_DETECT=		${LOCALBASE}/libdata/pkgconfig/mate-speech-1.0.pc
+matespeech_USE_MATE_IMPL=libbonobo
 
 evolutiondataserver_LIB_DEPENDS=edataserverui-1.2.11:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver_DETECT=		${LOCALBASE}/libdata/pkgconfig/evolution-data-server-1.2.pc
-evolutiondataserver_USE_GNOME_IMPL=gconf2 libxml2
+evolutiondataserver_USE_MATE_IMPL=gconf2 libxml2
 
 desktopfileutils_BUILD_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_DETECT=	${LOCALBASE}/bin/update-desktop-database
-desktopfileutils_USE_GNOME_IMPL=glib20
+desktopfileutils_USE_MATE_IMPL=glib20
 
 nautiluscdburner_LIB_DEPENDS=nautilus-burn.4:${PORTSDIR}/sysutils/nautilus-cd-burner
 nautiluscdburner_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-burn.pc
-nautiluscdburner_USE_GNOME_IMPL=nautilus2 desktopfileutils
+nautiluscdburner_USE_MATE_IMPL=nautilus2 desktopfileutils
 
-gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
-gnomemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
-gnomemenus_USE_GNOME_IMPL=	glib20
+matemenus_LIB_DEPENDS=		mate-menu.2:${PORTSDIR}/x11/mate-menus
+matemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libmate-menu.pc
+matemenus_USE_MATE_IMPL=	glib20
 
-pygnomeextras_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-extras-2.0.pc
-pygnomeextras_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
-pygnomeextras_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
-pygnomeextras_USE_GNOME_IMPL=pygnome2 libgtkhtml
+pymateextras_DETECT=		${LOCALBASE}/libdata/pkgconfig/mate-python-extras-2.0.pc
+pymateextras_BUILD_DEPENDS=	${pymateextras_DETECT}:${PORTSDIR}/x11-toolkits/py-mate-extras
+pymateextras_RUN_DEPENDS=	${pymateextras_DETECT}:${PORTSDIR}/x11-toolkits/py-mate-extras
+pymateextras_USE_MATE_IMPL=pymate2 libgtkhtml
 
-gnomedocutils_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-doc-utils.pc
-gnomedocutils_BUILD_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnome-doc-utils
-gnomedocutils_RUN_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnome-doc-utils
-gnomedocutils_USE_GNOME_IMPL=libxslt
+matedocutils_DETECT=	${LOCALBASE}/libdata/pkgconfig/mate-doc-utils.pc
+matedocutils_BUILD_DEPENDS=${matedocutils_DETECT}:${PORTSDIR}/textproc/mate-doc-utils
+matedocutils_RUN_DEPENDS=${matedocutils_DETECT}:${PORTSDIR}/textproc/mate-doc-utils
+matedocutils_USE_MATE_IMPL=libxslt
 
-pygnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-desktop-2.0.pc
-pygnomedesktop_BUILD_DEPENDS=	${pygnomedesktop_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-desktop
-pygnomedesktop_RUN_DEPENDS=	${pygnomedesktop_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-desktop
-pygnomedesktop_USE_GNOME_IMPL=pygnome2 libgnomeprintui gtksourceview gnomepanel libwnck nautilus2 metacity
+pymatedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/mate-python-desktop-2.0.pc
+pymatedesktop_BUILD_DEPENDS=	${pymatedesktop_DETECT}:${PORTSDIR}/x11-toolkits/py-mate-desktop
+pymatedesktop_RUN_DEPENDS=	${pymatedesktop_DETECT}:${PORTSDIR}/x11-toolkits/py-mate-desktop
+pymatedesktop_USE_MATE_IMPL=pymate2 libmateprintui gtksourceview matepanel libwnck nautilus2 metacity
 
 gtksharp10_DETECT=			${LOCALBASE}/libdata/pkgconfig/gtk-sharp.pc
 gtksharp10_BUILD_DEPENDS=	${gtksharp10_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp10
 gtksharp10_RUN_DEPENDS=		${gtksharp10_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp10
-gtksharp10_USE_GNOME_IMPL=	gtk20
+gtksharp10_USE_MATE_IMPL=	gtk20
 
 gtksharp20_DETECT=			${LOCALBASE}/libdata/pkgconfig/gtk-sharp-2.0.pc
 gtksharp20_BUILD_DEPENDS=	${gtksharp20_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp20
 gtksharp20_RUN_DEPENDS=		${gtksharp20_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp20
-gtksharp20_USE_GNOME_IMPL=	gtk20
+gtksharp20_USE_MATE_IMPL=	gtk20
 
-gnomesharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-sharp-2.0.pc
-gnomesharp20_BUILD_DEPENDS=	${gnomesharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-sharp20
-gnomesharp20_RUN_DEPENDS=	${gnomesharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-sharp20
-gnomesharp20_USE_GNOME_IMPL=	gnomepanel gtkhtml3 gtksharp20 librsvg2 vte
+matesharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/mate-sharp-2.0.pc
+matesharp20_BUILD_DEPENDS=	${matesharp20_DETECT}:${PORTSDIR}/x11-toolkits/mate-sharp20
+matesharp20_RUN_DEPENDS=	${matesharp20_DETECT}:${PORTSDIR}/x11-toolkits/mate-sharp20
+matesharp20_USE_MATE_IMPL=	matepanel gtkhtml3 gtksharp20 librsvg2 vte
 
-libgnomekbd_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
-libgnomekbd_LIB_DEPENDS=	gnomekbd.4:${PORTSDIR}/x11/libgnomekbd
-libgnomekbd_USE_GNOME_IMPL=	gconf2
+libmatekbd_DETECT=			${LOCALBASE}/libdata/pkgconfig/libmatekbd.pc
+libmatekbd_LIB_DEPENDS=	matekbd.4:${PORTSDIR}/x11/libmatekbd
+libmatekbd_USE_MATE_IMPL=	gconf2
 
 pygtksourceview_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygtksourceview-2.0.pc
 pygtksourceview_BUILD_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
 pygtksourceview_RUN_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
-pygtksourceview_USE_GNOME_IMPL=	gtksourceview2 pygtk2
+pygtksourceview_USE_MATE_IMPL=	gtksourceview2 pygtk2
 
 gvfs_DETECT=			${LOCALBASE}/lib/libgvfscommon.so
 gvfs_LIB_DEPENDS=		gvfscommon.0:${PORTSDIR}/devel/gvfs
-gvfs_USE_GNOME_IMPL=		glib20 gconf2
+gvfs_USE_MATE_IMPL=		glib20 gconf2
 
 .if defined(MARCUSCOM_CVS)
-. if exists(${PORTSDIR}/Mk/bsd.gnome-experimental.mk)
-.include "${PORTSDIR}/Mk/bsd.gnome-experimental.mk"
+. if exists(${PORTSDIR}/Mk/bsd.mate-experimental.mk)
+.include "${PORTSDIR}/Mk/bsd.mate-experimental.mk"
 . endif
 .endif
 
 .if defined(INSTALLS_ICONS)
-USE_GNOME+=	gtk-update-icon-cache
+USE_MATE+=	gtk-update-icon-cache
 .endif
 
 # End component definition section
 
 # This section defines tests for optional software.  These work off four
-# types of variables:  WANT_GNOME, WITH_GNOME, HAVE_GNOME and USE_GNOME.
+# types of variables:  WANT_MATE, WITH_MATE, HAVE_MATE and USE_MATE.
 # The logic of this is that a port can WANT support for a package; a user
 # specifies if they want ports compiled WITH certain features; this section
 # tests if we HAVE these features; and the port is then free to USE them.
 
 # The logic of this section is like this:
 #
-# .if defined(WANT_GNOME) && !defined(WITHOUT_GNOME)
-#   .for foo in ALL_GNOME_COMPONENTS
-#     .if defined(WITH_GNOME)
-#       HAVE_GNOME += foo
+# .if defined(WANT_MATE) && !defined(WITHOUT_MATE)
+#   .for foo in ALL_MATE_COMPONENTS
+#     .if defined(WITH_MATE)
+#       HAVE_MATE += foo
 #     .elif (foo installed)
-#       HAVE_GNOME += foo
+#       HAVE_MATE += foo
 #     .else
 #       Print option message
 #     .endif
@@ -587,59 +587,59 @@ USE_GNOME+=	gtk-update-icon-cache
 
 # Ports can make use of this like so:
 #
-# WANT_GNOME=		yes
+# WANT_MATE=		yes
 #
 # .include <bsd.port.pre.mk>
 #
-# .if ${HAVE_GNOME:Mfoo}!=""
+# .if ${HAVE_MATE:Mfoo}!=""
 # ... Do some things ...
-# USE_GNOME=		foo
+# USE_MATE=		foo
 # .else
 # ... Do some other things ...
 # .endif
 
-# If the user has not defined GNOME_DESKTOP_VERSION, let's try to prevent
+# If the user has not defined MATE_DESKTOP_VERSION, let's try to prevent
 # users from shooting themselves in the foot.  We will try to make an
 # intelligent choice on the user's behalf.
-.if exists(${gnomepanel3_DETECT})
-GNOME_DESKTOP_VERSION?=	3
-.elif exists(${gnomepanel_DETECT})
-GNOME_DESKTOP_VERSION?=	2
+.if exists(${matepanel3_DETECT})
+MATE_DESKTOP_VERSION?=	3
+.elif exists(${matepanel_DETECT})
+MATE_DESKTOP_VERSION?=	2
 .endif
 
 # We also check each component to see if it has a desktop requirement.  If
 # it does, and its requirement disagrees with the user's chosen desktop,
-# do not add the component to the HAVE_GNOME list.
+# do not add the component to the HAVE_MATE list.
 
-_USE_GNOME_SAVED:=${USE_GNOME}
-_USE_GNOME_DESKTOP=yes
-HAVE_GNOME?=
-.if (defined(WANT_GNOME) && !defined(WITHOUT_GNOME))
-. for component in ${_USE_GNOME_ALL}
-.      if defined(GNOME_DESKTOP_VERSION) && \
-	defined(${component}_GNOME_DESKTOP_VERSION)
-.         if ${GNOME_DESKTOP_VERSION}==${${component}_GNOME_DESKTOP_VERSION}
-HAVE_GNOME+=	${component}
+_USE_MATE_SAVED:=${USE_MATE}
+_USE_MATE_DESKTOP=yes
+HAVE_MATE?=
+.if (defined(WANT_MATE) && !defined(WITHOUT_MATE))
+. for component in ${_USE_MATE_ALL}
+.      if defined(MATE_DESKTOP_VERSION) && \
+	defined(${component}_MATE_DESKTOP_VERSION)
+.         if ${MATE_DESKTOP_VERSION}==${${component}_MATE_DESKTOP_VERSION}
+HAVE_MATE+=	${component}
 .         else
-_USE_GNOME_DESKTOP=no
+_USE_MATE_DESKTOP=no
 .         endif
 .      else
 .         if exists(${${component}_DETECT})
-HAVE_GNOME+=	${component}
-.         elif defined(WITH_GNOME)
-.            if ${WITH_GNOME}=="yes" || ${WITH_GNOME:M${component}}!="" \
-		|| ${WITH_GNOME}=="1"
-HAVE_GNOME+=	${component}
+HAVE_MATE+=	${component}
+.         elif defined(WITH_MATE)
+.            if ${WITH_MATE}=="yes" || ${WITH_MATE:M${component}}!="" \
+		|| ${WITH_MATE}=="1"
+HAVE_MATE+=	${component}
 .            endif
 .         endif
 .       endif
 . endfor
-.elif defined(WITHOUT_GNOME)
-.  if ${WITHOUT_GNOME}!="yes" && ${WITHOUT_GNOME}!="1"
-.    for component in ${_USE_GNOME_ALL}
-.      if ${WITHOUT_GNOME:M${component}}==""
+.elif defined(WITHOUT_MATE)
+.  if ${WITHOUT_MATE}!="yes" && ${WITHOUT_MATE}!="1"
+.    for component in ${_USE_MATE_ALL}
+.      if ${WITHOUT_MATE:M${component}}==""
 .        if exists(${${component}_DETECT})
-HAVE_GNOME+=	${component}
+HAVE_MATE+=	${component}
 .        endif
 .      endif
 .    endfor
@@ -651,37 +651,37 @@ HAVE_GNOME+=	${component}
 
 .if defined(_POSTMKINCLUDED) && !defined(Gnome_Post_Include)
 
-Gnome_Post_Include=		bsd.gnome.mk
+Gnome_Post_Include=		bsd.mate.mk
 
 .if !defined(Gnome_Pre_Include)
-.error The Pre include part of bsd.gnome.mk part is not included. Did you forget WANT_GNOME=yes before bsd.port.pre.mk?
+.error The Pre include part of bsd.mate.mk part is not included. Did you forget WANT_MATE=yes before bsd.port.pre.mk?
 .endif
 
-.if defined(USE_GNOME)
-# First of all expand all USE_GNOME_IMPL recursively
-. for component in ${_USE_GNOME_ALL}
-.  for subcomponent in ${${component}_USE_GNOME_IMPL}
-${component}_USE_GNOME_IMPL+=${${subcomponent}_USE_GNOME_IMPL}
+.if defined(USE_MATE)
+# First of all expand all USE_MATE_IMPL recursively
+. for component in ${_USE_MATE_ALL}
+.  for subcomponent in ${${component}_USE_MATE_IMPL}
+${component}_USE_MATE_IMPL+=${${subcomponent}_USE_MATE_IMPL}
 .  endfor
 . endfor
 
-# Then use already expanded USE_GNOME_IMPL to expand USE_GNOME.
+# Then use already expanded USE_MATE_IMPL to expand USE_MATE.
 # Also, check to see if each component has a desktop requirement.  If it does,
 # and if the user's chosen desktop is not of the same version, mark the
 # port as IGNORE.
-. for component in ${USE_GNOME:C/^([^:]+).*/\1/}
-.      if defined(GNOME_DESKTOP_VERSION) && \
-	defined(${component}_GNOME_DESKTOP_VERSION)
-.         if ${GNOME_DESKTOP_VERSION}!=${${component}_GNOME_DESKTOP_VERSION}
-IGNORE=	cannot install: ${PORTNAME} wants to use the GNOME
-IGNORE+=${${component}_GNOME_DESKTOP_VERSION} desktop, but you wish to use
-IGNORE+=the GNOME ${GNOME_DESKTOP_VERSION} desktop
+. for component in ${USE_MATE:C/^([^:]+).*/\1/}
+.      if defined(MATE_DESKTOP_VERSION) && \
+	defined(${component}_MATE_DESKTOP_VERSION)
+.         if ${MATE_DESKTOP_VERSION}!=${${component}_MATE_DESKTOP_VERSION}
+IGNORE=	cannot install: ${PORTNAME} wants to use the MATE
+IGNORE+=${${component}_MATE_DESKTOP_VERSION} desktop, but you wish to use
+IGNORE+=the MATE ${MATE_DESKTOP_VERSION} desktop
 .         endif
 .      endif
-.  if ${_USE_GNOME_ALL:M${component}}==""
+.  if ${_USE_MATE_ALL:M${component}}==""
 IGNORE=	cannot install: Unknown component ${component}
 .  endif
-_USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
+_USE_MATE+=	${${component}_USE_MATE_IMPL} ${component}
 . endfor
 
 # Setup the GTK+ API version for pixbuf loaders, input method modules,
@@ -694,27 +694,27 @@ PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}" \
 # included in the post-makefile section).
 .if defined(_AUTOTOOL_libtool)
 lthacks_CONFIGURE_ENV=		ac_cv_path_DOLT_BASH=
-lthacks_PRE_PATCH=		${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
-						${CP} -pf ${LIBTOOL} ${WRKDIR}/gnome-libtool && \
+lthacks_PRE_PATCH=		${CP} -pf ${LTMAIN} ${WRKDIR}/mate-ltmain.sh && \
+						${CP} -pf ${LIBTOOL} ${WRKDIR}/mate-libtool && \
 						for file in ${LIBTOOLFILES}; do \
 							${REINPLACE_CMD} -e \
-								'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/gnome-ltmain.sh|g; \
-								 /^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
+								'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/mate-ltmain.sh|g; \
+								 /^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/mate-libtool|g' \
 								${PATCH_WRKSRC}/$$file; \
 						done;
 .else
-.  if ${USE_GNOME:Mltverhack*}!="" || ${USE_GNOME:Mltasneededhack}!=""
-IGNORE=	cannot install: ${PORTNAME} uses the ltverhack and/or ltasneededhack GNOME components but does not use libtool
+.  if ${USE_MATE:Mltverhack*}!="" || ${USE_MATE:Mltasneededhack}!=""
+IGNORE=	cannot install: ${PORTNAME} uses the ltverhack and/or ltasneededhack MATE components but does not use libtool
 .  endif
 .endif
 
-.if ${USE_GNOME:Mltverhack\:*:C/^[^:]+:([^:]+).*/\1/}==""
+.if ${USE_MATE:Mltverhack\:*:C/^[^:]+:([^:]+).*/\1/}==""
 ltverhack_LIB_VERSION=	major=.`expr $$current - $$age`
 .else
-ltverhack_LIB_VERSION=	major=".${USE_GNOME:Mltverhack\:*:C/^[^:]+:([^:]+).*/\1/}"
+ltverhack_LIB_VERSION=	major=".${USE_MATE:Mltverhack\:*:C/^[^:]+:([^:]+).*/\1/}"
 .endif
 ltverhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
-ltverhack_PRE_PATCH=	for file in gnome-ltmain.sh gnome-libtool; do \
+ltverhack_PRE_PATCH=	for file in mate-ltmain.sh mate-libtool; do \
 							if [ -f ${WRKDIR}/$$file ]; then \
 								${REINPLACE_CMD} -e \
 									'/freebsd-elf)/,/;;/ s|major="\.$$current"|${ltverhack_LIB_VERSION}|; \
@@ -724,27 +724,27 @@ ltverhack_PRE_PATCH=	for file in gnome-ltmain.sh gnome-libtool; do \
 						done
 
 ltasneededhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
-ltasneededhack_PRE_PATCH=	if [ -f ${WRKDIR}/gnome-libtool ]; then \
+ltasneededhack_PRE_PATCH=	if [ -f ${WRKDIR}/mate-libtool ]; then \
 								${REINPLACE_CMD} -e \
 									'/^archive_cmds=/s/-shared/-shared -Wl,--as-needed/ ; \
 									/^archive_expsym_cmds=/s/-shared/-shared -Wl,--as-needed/' \
-									${WRKDIR}/gnome-libtool; \
+									${WRKDIR}/mate-libtool; \
 							fi
 
 # Set USE_CSTD for all ports that depend on glib12
-.if defined(_USE_GNOME) && !empty(_USE_GNOME:Mglib12)
+.if defined(_USE_MATE) && !empty(_USE_MATE:Mglib12)
 USE_CSTD=	gnu89
 .endif
 
 # Then traverse through all components, check which of them
-# exist in ${_USE_GNOME} and set variables accordingly
-.ifdef _USE_GNOME
-. if ${USE_GNOME:Mltverhack*}!= "" || ${USE_GNOME:Mltasneededhack}!= ""
-GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
+# exist in ${_USE_MATE} and set variables accordingly
+.ifdef _USE_MATE
+. if ${USE_MATE:Mltverhack*}!= "" || ${USE_MATE:Mltasneededhack}!= ""
+MATE_PRE_PATCH+=	${lthacks_PRE_PATCH}
 CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
 . endif
-. for component in ${_USE_GNOME_ALL}
-.  if ${_USE_GNOME:M${component}}!=""
+. for component in ${_USE_MATE_ALL}
+.  if ${_USE_MATE:M${component}}!=""
 PATCH_DEPENDS+=	${${component}_PATCH_DEPENDS}
 FETCH_DEPENDS+=	${${component}_FETCH_DEPENDS}
 EXTRACT_DEPENDS+=${${component}_EXTRACT_DEPENDS}
@@ -768,7 +768,7 @@ CONFIGURE_TARGET=	${${component}_CONFIGURE_TARGET}
 .    endif
 
 .    if defined(${component}_PRE_PATCH)
-GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
+MATE_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 .    endif
 
 .  endif
@@ -776,49 +776,49 @@ GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 .endif
 .endif
 
-.if defined(GNOME_PRE_PATCH)
+.if defined(MATE_PRE_PATCH)
 
-pre-patch: gnome-pre-patch
+pre-patch: mate-pre-patch
 
-gnome-pre-patch:
-	@${GNOME_PRE_PATCH:C/^;//1}
+mate-pre-patch:
+	@${MATE_PRE_PATCH:C/^;//1}
 .endif
 
-.if defined(WANT_GNOME)
-USE_GNOME?=
-.  if ${_USE_GNOME_SAVED}==${USE_GNOME}
-PLIST_SUB+=	GNOME:="@comment " NOGNOME:=""
+.if defined(WANT_MATE)
+USE_MATE?=
+.  if ${_USE_MATE_SAVED}==${USE_MATE}
+PLIST_SUB+=	MATE:="@comment " NOMATE:=""
 .  else
-PLIST_SUB+=	GNOME:="" NOGNOME:="@comment "
-.    if defined(GNOME_DESKTOP_VERSION)
-.      if ${_USE_GNOME_DESKTOP}=="yes"
-PLIST_SUB+=	GNOMEDESKTOP:="" NOGNOMEDESKTOP:="@comment "
+PLIST_SUB+=	MATE:="" NOMATE:="@comment "
+.    if defined(MATE_DESKTOP_VERSION)
+.      if ${_USE_MATE_DESKTOP}=="yes"
+PLIST_SUB+=	MATEDESKTOP:="" NOMATEDESKTOP:="@comment "
 .      else
-PLIST_SUB+=	GNOMEDESKTOP:="@comment " NOGNOMEDESKTOP:=""
+PLIST_SUB+=	MATEDESKTOP:="@comment " NOMATEDESKTOP:=""
 .      endif
 .    endif
 .  endif
 .endif
 
-.if defined(USE_GNOME_SUBR)
-GNOME_SUBR=		${LOCALBASE}/etc/gnome.subr
-RUN_DEPENDS+=	${GNOME_SUBR}:${PORTSDIR}/sysutils/gnome_subr
-SUB_LIST+=		GNOME_SUBR=${GNOME_SUBR}
+.if defined(USE_MATE_SUBR)
+MATE_SUBR=		${LOCALBASE}/etc/mate.subr
+RUN_DEPENDS+=	${MATE_SUBR}:${PORTSDIR}/sysutils/mate_subr
+SUB_LIST+=		MATE_SUBR=${MATE_SUBR}
 .endif
 
-.if ${MAINTAINER}=="gnome@FreeBSD.org"
-CONFIGURE_FAIL_MESSAGE= "Please run the gnomelogalyzer, available from \"http://www.freebsd.org/gnome/gnomelogalyzer.sh\", which will diagnose the problem and suggest a solution. If - and only if - the gnomelogalyzer cannot solve the problem, report the build failure to the FreeBSD GNOME team at ${MAINTAINER}, and attach (a) \"${CONFIGURE_WRKSRC}/${CONFIGURE_LOG}\", (b) the output of the failed make command, and (c) the gnomelogalyzer output. Also, it might be a good idea to provide an overview of all packages installed on your system (i.e. an \`ls ${PKG_DBDIR}\`). Put your attachment up on any website, copy-and-paste into http://freebsd-gnome.pastebin.com, or use send-pr(1) with the attachment. Try to avoid sending any attachments to the mailing list (${MAINTAINER}), because attachments sent to FreeBSD mailing lists are usually discarded by the mailing list software."
+.if ${MAINTAINER}=="mate@FreeBSD.org"
+CONFIGURE_FAIL_MESSAGE= "Please run the matelogalyzer, available from \"http://www.freebsd.org/mate/matelogalyzer.sh\", which will diagnose the problem and suggest a solution. If - and only if - the matelogalyzer cannot solve the problem, report the build failure to the FreeBSD MATE team at ${MAINTAINER}, and attach (a) \"${CONFIGURE_WRKSRC}/${CONFIGURE_LOG}\", (b) the output of the failed make command, and (c) the matelogalyzer output. Also, it might be a good idea to provide an overview of all packages installed on your system (i.e. an \`ls ${PKG_DBDIR}\`). Put your attachment up on any website, copy-and-paste into http://freebsd-mate.pastebin.com, or use send-pr(1) with the attachment. Try to avoid sending any attachments to the mailing list (${MAINTAINER}), because attachments sent to FreeBSD mailing lists are usually discarded by the mailing list software."
 .endif
 
 
 .if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF) || defined(INSTALLS_ICONS) \
-	|| defined(GLIB_SCHEMAS) || (defined(_USE_GNOME) && ${_USE_GNOME:Mgnomehier}!="")
-pre-su-install: gnome-pre-su-install
-post-install: gnome-post-install
+	|| defined(GLIB_SCHEMAS) || (defined(_USE_MATE) && ${_USE_MATE:Mmatehier}!="")
+pre-su-install: mate-pre-su-install
+post-install: mate-post-install
 
-gnome-pre-su-install:
-.if defined(_USE_GNOME) && ${_USE_GNOME:Mgnomehier}!="" && !defined(NO_MTREE)
-	@${MTREE_CMD} ${MTREE_ARGS:S/${MTREE_FILE}/${GNOME_MTREE_FILE}/} ${PREFIX}/ >/dev/null
+mate-pre-su-install:
+.if defined(_USE_MATE) && ${_USE_MATE:Mmatehier}!="" && !defined(NO_MTREE)
+	@${MTREE_CMD} ${MTREE_ARGS:S/${MTREE_FILE}/${MATE_MTREE_FILE}/} ${PREFIX}/ >/dev/null
 .endif
 .if defined(GCONF_SCHEMAS)
 	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/
@@ -826,7 +826,7 @@ gnome-pre-su-install:
 	@${DO_NADA}
 .endif
 
-gnome-post-install:
+mate-post-install:
 .  if defined(GCONF_SCHEMAS)
 	@for i in ${GCONF_SCHEMAS}; do \
 		${ECHO_CMD} "@unexec env GCONF_CONFIG_SOURCE=xml:${GCONF_CONFIG_OPTIONS}:%D/${GCONF_CONFIG_DIRECTORY} gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/$${i} > /dev/null || /usr/bin/true" \
