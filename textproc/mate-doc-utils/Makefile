@@ -7,7 +7,7 @@
 
 PORTNAME=	mate-doc-utils
 PORTVERSION=	1.2.1
-CATEGORIES=	textproc mate
+CATEGORIES=	textproc
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.2/
 DISTFILES=	${DISTNAME}.tar.xz
 
@@ -42,5 +42,7 @@ pre-configure:
 post-install:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}/xml2po
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}/xml2po/modes
+	mv ${LOCALBASE}/share/pkgconfig/mate-doc-utils.pc ${LOCALBASE}/lib/pkgconfig/mate-doc-utils.pc
+	mv ${LOCALBASE}/share/pkgconfig/xml2po.pc ${LOCALBASE}/lib/pkgconfig/xml2po.pc
 
 .include <bsd.port.mk>

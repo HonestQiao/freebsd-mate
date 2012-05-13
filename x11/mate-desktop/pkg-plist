@@ -1,189 +1,201 @@
-bin/gnome-about
-include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
-include/gnome-desktop-2.0/libgnome/gnome-desktop-utils.h
-include/gnome-desktop-2.0/libgnomeui/gnome-bg.h
-include/gnome-desktop-2.0/libgnomeui/gnome-bg-crossfade.h
-include/gnome-desktop-2.0/libgnomeui/gnome-desktop-thumbnail.h
-include/gnome-desktop-2.0/libgnomeui/gnome-rr-config.h
-include/gnome-desktop-2.0/libgnomeui/gnome-rr-labeler.h
-include/gnome-desktop-2.0/libgnomeui/gnome-rr.h
-lib/libgnome-desktop-2.a
-lib/libgnome-desktop-2.la
-lib/libgnome-desktop-2.so
-lib/libgnome-desktop-2.so.17
-libdata/pkgconfig/gnome-desktop-2.0.pc
-share/applications/gnome-about.desktop
-share/gnome-about/contributors.list
-share/gnome-about/foundation-members.list
-share/gnome-about/gnome-64.png
-share/gnome-about/gnome-version.xml
-share/gnome-about/headers/header-bg-ancient01a.png
-share/gnome-about/headers/header-bg-city01.png
-share/gnome-about/headers/header-bg-clouds01.png
-share/gnome-about/headers/header-bg-clouds02.png
-share/gnome-about/headers/header-bg-hills01.png
-share/gnome-about/headers/header-bg-landscape01.png
-share/gnome-about/headers/header-bg-mountains01.png
-share/gnome-about/headers/header-bg-snow01.png
-share/gnome-about/headers/header-bg-sunset01.png
-share/gnome/help/fdl/C/fdl.xml
-share/gnome/help/fdl/ar/fdl.xml
-share/gnome/help/fdl/ca/fdl.xml
-share/gnome/help/fdl/de/fdl.xml
-share/gnome/help/fdl/el/fdl.xml
-share/gnome/help/fdl/es/fdl.xml
-share/gnome/help/fdl/eu/fdl.xml
-share/gnome/help/fdl/fr/fdl.xml
-share/gnome/help/fdl/hu/fdl.xml
-share/gnome/help/fdl/ko/fdl.xml
-share/gnome/help/fdl/oc/fdl.xml
-share/gnome/help/fdl/pl/fdl.xml
-share/gnome/help/fdl/sv/fdl.xml
-share/gnome/help/fdl/uk/fdl.xml
-share/gnome/help/fdl/vi/fdl.xml
-share/gnome/help/gpl/C/gpl.xml
-share/gnome/help/gpl/ar/gpl.xml
-share/gnome/help/gpl/ca/gpl.xml
-share/gnome/help/gpl/cs/gpl.xml
-share/gnome/help/gpl/de/gpl.xml
-share/gnome/help/gpl/el/gpl.xml
-share/gnome/help/gpl/es/gpl.xml
-share/gnome/help/gpl/eu/gpl.xml
-share/gnome/help/gpl/fi/gpl.xml
-share/gnome/help/gpl/fr/gpl.xml
-share/gnome/help/gpl/hu/gpl.xml
-share/gnome/help/gpl/ko/gpl.xml
-share/gnome/help/gpl/nds/gpl.xml
-share/gnome/help/gpl/oc/gpl.xml
-share/gnome/help/gpl/pa/gpl.xml
-share/gnome/help/gpl/sv/gpl.xml
-share/gnome/help/gpl/uk/gpl.xml
-share/gnome/help/gpl/vi/gpl.xml
-share/gnome/help/gpl/zh_CN/gpl.xml
-share/gnome/help/lgpl/C/lgpl.xml
-share/gnome/help/lgpl/ar/lgpl.xml
-share/gnome/help/lgpl/de/lgpl.xml
-share/gnome/help/lgpl/el/lgpl.xml
-share/gnome/help/lgpl/es/lgpl.xml
-share/gnome/help/lgpl/eu/lgpl.xml
-share/gnome/help/lgpl/fi/lgpl.xml
-share/gnome/help/lgpl/fr/lgpl.xml
-share/gnome/help/lgpl/hu/lgpl.xml
-share/gnome/help/lgpl/ko/lgpl.xml
-share/gnome/help/lgpl/oc/lgpl.xml
-share/gnome/help/lgpl/pa/lgpl.xml
-share/gnome/help/lgpl/sv/lgpl.xml
-share/gnome/help/lgpl/uk/lgpl.xml
-share/gnome/help/lgpl/vi/lgpl.xml
-share/gnome/help/lgpl/zh_CN/lgpl.xml
-share/libgnome-desktop/pnp.ids
-share/locale/af/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/am/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/an/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ar/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/as/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ast/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/az/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/be/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/be@latin/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/bg/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/bn/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/bn_IN/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/br/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/bs/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ca/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ca@valencia/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/crh/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/cs/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/cy/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/da/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/de/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/dz/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/el/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/en@shaw/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/en_CA/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/en_GB/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/eo/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/es/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/et/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/eu/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/fa/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/fi/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/fr/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/fur/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ga/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/gl/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/gu/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/he/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/hi/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/hr/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/hu/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/hy/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/id/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ig/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/is/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/it/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ja/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ka/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/kk/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/kn/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ko/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ku/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ky/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/li/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/lo/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/lt/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/lv/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/mai/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/mg/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/mi/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/mk/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ml/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/mn/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/mr/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ms/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/nb/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/nds/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ne/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/nl/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/nn/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/nso/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/oc/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/or/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/pa/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/pl/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ps/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/pt/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/pt_BR/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ro/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ru/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/rw/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/si/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/sk/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/sl/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/sq/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/sr/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/sr@latin/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/sv/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ta/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/te/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/th/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/tk/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/tr/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ug/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/uk/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/ur/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/uz/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/uz@cyrillic/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/vi/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/wa/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/xh/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/yi/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/yo/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/zh_CN/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/zh_HK/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/zh_TW/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
+bin/mate-about
+include/mate-desktop-2.0/libmate/mate-desktop-item.h
+include/mate-desktop-2.0/libmate/mate-desktop-utils.h
+include/mate-desktop-2.0/libmateui/mate-bg-crossfade.h
+include/mate-desktop-2.0/libmateui/mate-bg.h
+include/mate-desktop-2.0/libmateui/mate-desktop-thumbnail.h
+include/mate-desktop-2.0/libmateui/mate-rr-config.h
+include/mate-desktop-2.0/libmateui/mate-rr-labeler.h
+include/mate-desktop-2.0/libmateui/mate-rr.h
+lib/libmate-desktop-2.a
+lib/libmate-desktop-2.la
+lib/libmate-desktop-2.so
+lib/libmate-desktop-2.so.18
+lib/pkgconfig/mate-desktop-2.0.pc
+share/applications/mate-about.desktop
+share/gtk-doc/html/mate-desktop/MateBG.html
+share/gtk-doc/html/mate-desktop/MateDesktopThumbnailFactory.html
+share/gtk-doc/html/mate-desktop/MateRRLabeler.html
+share/gtk-doc/html/mate-desktop/background.html
+share/gtk-doc/html/mate-desktop/home.png
+share/gtk-doc/html/mate-desktop/index.html
+share/gtk-doc/html/mate-desktop/index.sgml
+share/gtk-doc/html/mate-desktop/intro.html
+share/gtk-doc/html/mate-desktop/left.png
+share/gtk-doc/html/mate-desktop/libmate.html
+share/gtk-doc/html/mate-desktop/mate-desktop-MateDesktopItem.html
+share/gtk-doc/html/mate-desktop/mate-desktop-Miscellaneous-Functions.html
+share/gtk-doc/html/mate-desktop/mate-desktop-Miscellaneous-Thumbnail-Functions.html
+share/gtk-doc/html/mate-desktop/mate-desktop-mate-rr-config.html
+share/gtk-doc/html/mate-desktop/mate-desktop-mate-rr-crtc.html
+share/gtk-doc/html/mate-desktop/mate-desktop-mate-rr-mode.html
+share/gtk-doc/html/mate-desktop/mate-desktop-mate-rr-output.html
+share/gtk-doc/html/mate-desktop/mate-desktop-mate-rr-screen.html
+share/gtk-doc/html/mate-desktop/mate-desktop.devhelp
+share/gtk-doc/html/mate-desktop/mate-desktop.devhelp2
+share/gtk-doc/html/mate-desktop/randr.html
+share/gtk-doc/html/mate-desktop/right.png
+share/gtk-doc/html/mate-desktop/style.css
+share/gtk-doc/html/mate-desktop/thumbnail.html
+share/gtk-doc/html/mate-desktop/up.png
+share/libmate-desktop/pnp.ids
+share/locale/af/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/am/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/an/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ar/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/as/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ast/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/az/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/be/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/be@latin/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/bg/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/bn/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/bn_IN/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/br/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/bs/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ca/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ca@valencia/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/crh/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/cs/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/cy/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/da/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/de/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/dz/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/el/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/en@shaw/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/en_CA/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/en_GB/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/eo/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/es/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/et/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/eu/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/fa/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/fi/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/fr/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/fur/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ga/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/gl/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/gu/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/he/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/hi/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/hr/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/hu/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/hy/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/id/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ig/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/is/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/it/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ja/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ka/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/kk/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/kn/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ko/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ku/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ky/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/li/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/lo/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/lt/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/lv/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/mai/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/mg/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/mi/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/mk/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ml/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/mn/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/mr/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ms/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/nb/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/nds/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ne/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/nl/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/nn/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/nso/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/oc/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/or/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/pa/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/pl/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ps/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/pt/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/pt_BR/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ro/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ru/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/rw/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/si/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/sk/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/sl/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/sq/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/sr/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/sv/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ta/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/te/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/th/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/tk/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/tr/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ug/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/uk/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/ur/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/uz/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/uz@cyrillic/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/vi/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/wa/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/xh/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/yi/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/yo/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/zh_CN/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/zh_HK/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/zh_TW/LC_MESSAGES/mate-desktop-2.0.mo
+share/locale/zu/LC_MESSAGES/mate-desktop-2.0.mo
+share/mate/help/fdl/C/fdl.xml
+share/mate/help/fdl/ar/fdl.xml
+share/mate/help/fdl/ca/fdl.xml
+share/mate/help/fdl/de/fdl.xml
+share/mate/help/fdl/el/fdl.xml
+share/mate/help/fdl/es/fdl.xml
+share/mate/help/fdl/eu/fdl.xml
+share/mate/help/fdl/fr/fdl.xml
+share/mate/help/fdl/hu/fdl.xml
+share/mate/help/fdl/ko/fdl.xml
+share/mate/help/fdl/oc/fdl.xml
+share/mate/help/fdl/pl/fdl.xml
+share/mate/help/fdl/sv/fdl.xml
+share/mate/help/fdl/uk/fdl.xml
+share/mate/help/fdl/vi/fdl.xml
+share/mate/help/gpl/C/gpl.xml
+share/mate/help/gpl/ar/gpl.xml
+share/mate/help/gpl/ca/gpl.xml
+share/mate/help/gpl/cs/gpl.xml
+share/mate/help/gpl/de/gpl.xml
+share/mate/help/gpl/el/gpl.xml
+share/mate/help/gpl/es/gpl.xml
+share/mate/help/gpl/eu/gpl.xml
+share/mate/help/gpl/fi/gpl.xml
+share/mate/help/gpl/fr/gpl.xml
+share/mate/help/gpl/hu/gpl.xml
+share/mate/help/gpl/ko/gpl.xml
+share/mate/help/gpl/nds/gpl.xml
+share/mate/help/gpl/oc/gpl.xml
+share/mate/help/gpl/pa/gpl.xml
+share/mate/help/gpl/sv/gpl.xml
+share/mate/help/gpl/uk/gpl.xml
+share/mate/help/gpl/vi/gpl.xml
+share/mate/help/gpl/zh_CN/gpl.xml
+share/mate/help/lgpl/C/lgpl.xml
+share/mate/help/lgpl/ar/lgpl.xml
+share/mate/help/lgpl/de/lgpl.xml
+share/mate/help/lgpl/el/lgpl.xml
+share/mate/help/lgpl/es/lgpl.xml
+share/mate/help/lgpl/eu/lgpl.xml
+share/mate/help/lgpl/fi/lgpl.xml
+share/mate/help/lgpl/fr/lgpl.xml
+share/mate/help/lgpl/hu/lgpl.xml
+share/mate/help/lgpl/ko/lgpl.xml
+share/mate/help/lgpl/oc/lgpl.xml
+share/mate/help/lgpl/pa/lgpl.xml
+share/mate/help/lgpl/sv/lgpl.xml
+share/mate/help/lgpl/uk/lgpl.xml
+share/mate/help/lgpl/vi/lgpl.xml
+share/mate/help/lgpl/zh_CN/lgpl.xml
 share/omf/fdl/fdl-C.omf
 share/omf/fdl/fdl-ar.omf
 share/omf/fdl/fdl-ca.omf
@@ -234,203 +246,71 @@ share/omf/lgpl/lgpl-sv.omf
 share/omf/lgpl/lgpl-uk.omf
 share/omf/lgpl/lgpl-vi.omf
 share/omf/lgpl/lgpl-zh_CN.omf
-share/pixmaps/apple-green.png
-share/pixmaps/apple-red.png
-share/pixmaps/gnome-aorta.png
-share/pixmaps/gnome-applets.png
-share/pixmaps/gnome-background-image.png
-share/pixmaps/gnome-background-pattern.png
-share/pixmaps/gnome-background.png
-share/pixmaps/gnome-calc2.png
-share/pixmaps/gnome-calc3.png
-share/pixmaps/gnome-calendar.png
-share/pixmaps/gnome-ccbackground.png
-share/pixmaps/gnome-ccdesktop.png
-share/pixmaps/gnome-ccdialog.png
-share/pixmaps/gnome-ccmime.png
-share/pixmaps/gnome-ccperiph.png
-share/pixmaps/gnome-ccscreensaver.png
-share/pixmaps/gnome-ccwindowmanager.png
-share/pixmaps/gnome-color-browser.png
-share/pixmaps/gnome-color-xterm.png
-share/pixmaps/gnome-computer.png
-share/pixmaps/gnome-cromagnon.png
-share/pixmaps/gnome-day.png
-share/pixmaps/gnome-debian.png
-share/pixmaps/gnome-diskfree.png
-share/pixmaps/gnome-emacs.png
-share/pixmaps/gnome-eterm.png
-share/pixmaps/gnome-file-c.png
-share/pixmaps/gnome-file-h.png
-share/pixmaps/gnome-folder.png
-share/pixmaps/gnome-gemvt.png
-share/pixmaps/gnome-gimp.png
-share/pixmaps/gnome-gmenu.png
-share/pixmaps/gnome-gmush.png
-share/pixmaps/gnome-gnomoku.png
-share/pixmaps/gnome-home.png
-share/pixmaps/gnome-html.png
-share/pixmaps/gnome-image-gif.png
-share/pixmaps/gnome-image-jpeg.png
-share/pixmaps/gnome-irc.png
-share/pixmaps/gnome-laptop.png
-share/pixmaps/gnome-log.png
-share/pixmaps/gnome-logo-icon-transparent.png
-share/pixmaps/gnome-logo-icon.png
-share/pixmaps/gnome-logo-large.png
-share/pixmaps/gnome-mdi.png
-share/pixmaps/gnome-mnemonic.png
-share/pixmaps/gnome-month.png
-share/pixmaps/gnome-mouse.png
-share/pixmaps/gnome-news.png
-share/pixmaps/gnome-note.png
-share/pixmaps/gnome-qeye.png
-share/pixmaps/gnome-set-time.png
-share/pixmaps/gnome-spider.png
-share/pixmaps/gnome-squeak.png
-share/pixmaps/gnome-suse.png
-share/pixmaps/gnome-talk.png
-share/pixmaps/gnome-term-linux.png
-share/pixmaps/gnome-term-linux2.png
-share/pixmaps/gnome-term-night.png
-share/pixmaps/gnome-term-tiger.png
-share/pixmaps/gnome-term.png
-share/pixmaps/gnome-tigert.png
-share/pixmaps/gnome-touristinfo.png
-share/pixmaps/gnome-user-interface.png
-share/pixmaps/gnome-week.png
-share/pixmaps/gnome-windows.png
-share/pixmaps/gnome-word.png
-share/pixmaps/gnome-xterm.png
-share/pixmaps/gtkvim.png
-share/pixmaps/kterm.xpm
-share/pixmaps/monitor.png
-share/pixmaps/vnterm.xpm
 @dirrm share/omf/lgpl
 @dirrm share/omf/gpl
 @dirrm share/omf/fdl
-@dirrm share/gnome/help/lgpl/zh_CN
-@dirrm share/gnome/help/lgpl/vi
-@dirrm share/gnome/help/lgpl/uk
-@dirrm share/gnome/help/lgpl/sv
-@dirrm share/gnome/help/lgpl/pa
-@dirrm share/gnome/help/lgpl/oc
-@dirrm share/gnome/help/lgpl/ko
-@dirrm share/gnome/help/lgpl/hu
-@dirrm share/gnome/help/lgpl/fr
-@dirrm share/gnome/help/lgpl/fi
-@dirrm share/gnome/help/lgpl/eu
-@dirrm share/gnome/help/lgpl/es
-@dirrm share/gnome/help/lgpl/el
-@dirrm share/gnome/help/lgpl/de
-@dirrm share/gnome/help/lgpl/ar
-@dirrm share/gnome/help/gpl/zh_CN
-@dirrm share/gnome/help/gpl/vi
-@dirrm share/gnome/help/gpl/uk
-@dirrm share/gnome/help/gpl/sv
-@dirrm share/gnome/help/gpl/pa
-@dirrm share/gnome/help/gpl/oc
-@dirrm share/gnome/help/gpl/nds
-@dirrm share/gnome/help/gpl/ko
-@dirrm share/gnome/help/gpl/hu
-@dirrm share/gnome/help/gpl/fr
-@dirrm share/gnome/help/gpl/fi
-@dirrm share/gnome/help/gpl/eu
-@dirrm share/gnome/help/gpl/es
-@dirrm share/gnome/help/gpl/el
-@dirrm share/gnome/help/gpl/de
-@dirrm share/gnome/help/gpl/cs
-@dirrm share/gnome/help/gpl/ca
-@dirrm share/gnome/help/gpl/ar
-@dirrm share/gnome/help/fdl/vi
-@dirrm share/gnome/help/fdl/uk
-@dirrm share/gnome/help/fdl/sv
-@dirrm share/gnome/help/fdl/pl
-@dirrm share/gnome/help/fdl/oc
-@dirrm share/gnome/help/fdl/ko
-@dirrm share/gnome/help/fdl/hu
-@dirrm share/gnome/help/fdl/fr
-@dirrm share/gnome/help/fdl/eu
-@dirrm share/gnome/help/fdl/es
-@dirrm share/gnome/help/fdl/el
-@dirrm share/gnome/help/fdl/de
-@dirrm share/gnome/help/fdl/ca
-@dirrm share/gnome/help/fdl/ar
-@dirrm share/gnome-about/headers
-@dirrmtry share/applications
-@dirrm include/gnome-desktop-2.0/libgnomeui
-@dirrm include/gnome-desktop-2.0/libgnome
-@dirrm include/gnome-desktop-2.0
-@dirrm share/libgnome-desktop
-@dirrmtry share/locale/zu/LC_MESSAGES
-@dirrmtry share/locale/zu
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/yo/LC_MESSAGES
-@dirrmtry share/locale/yo
-@dirrmtry share/locale/yi/LC_MESSAGES
-@dirrmtry share/locale/yi
-@dirrmtry share/locale/xh/LC_MESSAGES
-@dirrmtry share/locale/xh
-@dirrmtry share/locale/uz@cyrillic/LC_MESSAGES
-@dirrmtry share/locale/uz@cyrillic
-@dirrmtry share/locale/ur/LC_MESSAGES
-@dirrmtry share/locale/ur
-@dirrmtry share/locale/ug/LC_MESSAGES
-@dirrmtry share/locale/ug
-@dirrmtry share/locale/te/LC_MESSAGES
-@dirrmtry share/locale/te
-@dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/sr@latin
-@dirrmtry share/locale/si/LC_MESSAGES
-@dirrmtry share/locale/si
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/ps/LC_MESSAGES
-@dirrmtry share/locale/ps
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/nso/LC_MESSAGES
-@dirrmtry share/locale/nso
-@dirrmtry share/locale/nds/LC_MESSAGES
-@dirrmtry share/locale/nds
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/mi/LC_MESSAGES
-@dirrmtry share/locale/mi
-@dirrmtry share/locale/mg/LC_MESSAGES
-@dirrmtry share/locale/mg
-@dirrmtry share/locale/mai/LC_MESSAGES
-@dirrmtry share/locale/mai
-@dirrmtry share/locale/lo/LC_MESSAGES
-@dirrmtry share/locale/lo
-@dirrmtry share/locale/ky/LC_MESSAGES
-@dirrmtry share/locale/ky
-@dirrmtry share/locale/ku/LC_MESSAGES
-@dirrmtry share/locale/ku
-@dirrmtry share/locale/kk/LC_MESSAGES
-@dirrmtry share/locale/kk
-@dirrmtry share/locale/ig/LC_MESSAGES
-@dirrmtry share/locale/ig
-@dirrmtry share/locale/hy/LC_MESSAGES
-@dirrmtry share/locale/hy
-@dirrmtry share/locale/fur/LC_MESSAGES
-@dirrmtry share/locale/fur
-@dirrmtry share/locale/en@shaw/LC_MESSAGES
-@dirrmtry share/locale/en@shaw
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/crh/LC_MESSAGES
-@dirrmtry share/locale/crh
-@dirrmtry share/locale/ca@valencia/LC_MESSAGES
-@dirrmtry share/locale/ca@valencia
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
-@dirrmtry share/locale/be@latin/LC_MESSAGES
-@dirrmtry share/locale/be@latin
-@dirrmtry share/locale/ast/LC_MESSAGES
-@dirrmtry share/locale/ast
-@dirrmtry share/locale/as/LC_MESSAGES
-@dirrmtry share/locale/as
-@dirrmtry share/locale/an/LC_MESSAGES
-@dirrmtry share/locale/an
+@dirrm share/omf
+@dirrm share/mate/help/lgpl/zh_CN
+@dirrm share/mate/help/lgpl/vi
+@dirrm share/mate/help/lgpl/uk
+@dirrm share/mate/help/lgpl/sv
+@dirrm share/mate/help/lgpl/pa
+@dirrm share/mate/help/lgpl/oc
+@dirrm share/mate/help/lgpl/ko
+@dirrm share/mate/help/lgpl/hu
+@dirrm share/mate/help/lgpl/fr
+@dirrm share/mate/help/lgpl/fi
+@dirrm share/mate/help/lgpl/eu
+@dirrm share/mate/help/lgpl/es
+@dirrm share/mate/help/lgpl/el
+@dirrm share/mate/help/lgpl/de
+@dirrm share/mate/help/lgpl/ar
+@dirrm share/mate/help/lgpl/C
+@dirrm share/mate/help/lgpl
+@dirrm share/mate/help/gpl/zh_CN
+@dirrm share/mate/help/gpl/vi
+@dirrm share/mate/help/gpl/uk
+@dirrm share/mate/help/gpl/sv
+@dirrm share/mate/help/gpl/pa
+@dirrm share/mate/help/gpl/oc
+@dirrm share/mate/help/gpl/nds
+@dirrm share/mate/help/gpl/ko
+@dirrm share/mate/help/gpl/hu
+@dirrm share/mate/help/gpl/fr
+@dirrm share/mate/help/gpl/fi
+@dirrm share/mate/help/gpl/eu
+@dirrm share/mate/help/gpl/es
+@dirrm share/mate/help/gpl/el
+@dirrm share/mate/help/gpl/de
+@dirrm share/mate/help/gpl/cs
+@dirrm share/mate/help/gpl/ca
+@dirrm share/mate/help/gpl/ar
+@dirrm share/mate/help/gpl/C
+@dirrm share/mate/help/gpl
+@dirrm share/mate/help/fdl/vi
+@dirrm share/mate/help/fdl/uk
+@dirrm share/mate/help/fdl/sv
+@dirrm share/mate/help/fdl/pl
+@dirrm share/mate/help/fdl/oc
+@dirrm share/mate/help/fdl/ko
+@dirrm share/mate/help/fdl/hu
+@dirrm share/mate/help/fdl/fr
+@dirrm share/mate/help/fdl/eu
+@dirrm share/mate/help/fdl/es
+@dirrm share/mate/help/fdl/el
+@dirrm share/mate/help/fdl/de
+@dirrm share/mate/help/fdl/ca
+@dirrm share/mate/help/fdl/ar
+@dirrm share/mate/help/fdl/C
+@dirrm share/mate/help/fdl
+@dirrm share/mate/help
+@dirrm share/mate
+@dirrm share/libmate-desktop
+@dirrm share/gtk-doc/html/mate-desktop
+@dirrm share/gtk-doc/html
+@dirrm share/gtk-doc
+@dirrm share/applications
+@dirrm lib/pkgconfig
+@dirrm include/mate-desktop-2.0/libmateui
+@dirrm include/mate-desktop-2.0/libmate
+@dirrm include/mate-desktop-2.0

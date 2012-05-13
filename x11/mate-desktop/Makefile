@@ -7,7 +7,7 @@
 
 PORTNAME=	mate-desktop
 PORTVERSION=	1.2.0
-CATEGORIES=	x11 mate
+CATEGORIES=	x11
 MASTER_SITES=	http://pub.mate-desktop.org/releases/1.2/
 DISTFILES=	${DISTNAME}.tar.xz
 

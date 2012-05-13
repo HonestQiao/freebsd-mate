@@ -211,8 +211,8 @@ share/omf/mate-doc-make/mate-doc-make-C.omf
 share/omf/mate-doc-make/mate-doc-make-de.omf
 share/omf/mate-doc-xslt/mate-doc-xslt-C.omf
 share/omf/mate-doc-xslt/mate-doc-xslt-de.omf
-share/pkgconfig/mate-doc-utils.pc
-share/pkgconfig/xml2po.pc
+lib/pkgconfig/mate-doc-utils.pc
+lib/pkgconfig/xml2po.pc
 share/xml/mallard/1.0/mallard.rnc
 share/xml/mallard/1.0/mallard.rng
 share/xml/mate/xslt/common/theme.xsl
