@@ -17,8 +17,11 @@ COMMENT=	Libraries for MATE, a GNU desktop environment
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
+
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra
-RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
+
+RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
+				gtk-doc:${PORTSDIR}/textproc/gtk-doc
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
