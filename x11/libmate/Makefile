@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	libmate
-PORTVERSION=	1.2.0
+PORTVERSION=	1.3.0
 CATEGORIES=	x11 mate
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.2/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.3/
 DISTFILES= 	${DISTNAME}.tar.xz
 
 MAINTAINER=	linpct@gmail.com
@@ -17,11 +17,8 @@ COMMENT=	Libraries for MATE, a GNU desktop environment
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
-
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra
-
-RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
-				gtk-doc:${PORTSDIR}/textproc/gtk-doc
+RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
